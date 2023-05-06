@@ -3,7 +3,8 @@ from human import Human
 
 # Manager - Function Class
 class Manager:
-    def count_adult(self, humans):
+    @staticmethod
+    def count_adult(humans):
         if isinstance(humans, (list, tuple)):
             count = 0
 
@@ -14,10 +15,11 @@ class Manager:
 
             return count
 
-    def count_underage(self, humans):
+    @staticmethod
+    def count_underage(humans):
         if isinstance(humans, (list, tuple)):
             total = len(humans)
-            total -= self.count_adult(humans)
+            total -= Manager.count_adult(humans)
             return total
 
 
@@ -28,8 +30,7 @@ def main():
 
     ls = (h1, h2, h3)
 
-    mngr = Manager()
-    underage = mngr.count_underage(ls)
+    underage = Manager.count_underage(ls)
     print(f"Underage people - {underage}")
 
 
