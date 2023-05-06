@@ -1,7 +1,7 @@
 # Human - Entity Class
 class Human:
 
-    def __init__(self, name='no name', age='1', alive=True):
+    def __init__(self, name='no name', age=1, alive=True):
         self.__name = name
         self.__age = age
         self.__alive = alive
