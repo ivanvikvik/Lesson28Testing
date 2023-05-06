@@ -6,24 +6,30 @@ class Human:
         self.__age = age
         self.__alive = alive
 
-    def get_name(self):
+    @property
+    def name(self):
         return self.__name
 
-    def set_name(self, name):
+    @name.setter
+    def name(self, name):
         if isinstance(name, str):
             self.__name = name
 
-    def get_age(self):
+    @property
+    def age(self):
         return self.__age
 
-    def set_age(self, age):
+    @age.setter
+    def age(self, age):
         if isinstance(age, int) and 0 < age <= 120:
             self.__age = age
 
-    def is_alive(self):
+    @property
+    def alive(self):
         return self.__alive
 
-    def set_alive(self, alive):
+    @alive.setter
+    def alive(self, alive):
         if isinstance(alive, bool):
             self.__alive = alive
 
@@ -34,8 +40,8 @@ class Human:
 
 def main():
     h1 = Human()
-    h1.set_name(1234)
-    h1.set_age(-20)
+    h1.name = 1234
+    h1.age = -20
     print(h1)
 
     h2 = Human("Kate", 18, False)
