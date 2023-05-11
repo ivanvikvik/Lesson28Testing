@@ -34,8 +34,8 @@ class Human:
             self.__alive = alive
 
     def __str__(self):
-        return f"{self.__name}: age = {self.__age}. " \
-               f"Is alive? - {'YES' if self.__alive else 'NO'}"
+        return (f"{self.__name}: age = {self.__age}. "
+                f"Is alive? - {'YES' if self.__alive else 'NO'}. ")
 
 
 def main():
